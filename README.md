@@ -4,7 +4,7 @@ A sample project
 
 ## Getting Started
 
-- bottom navigstion bar
+- bottom navigation bar
 - map layer
 - firebase login
 - firebase signup
