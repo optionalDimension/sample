@@ -20,6 +20,7 @@ dependencies:
   firebase_storage: ^11.6.0
   firebase_auth: ^4.16.0
   firebase_app_check: ^0.2.1+8
+  lecle_bubble_timeline: ^0.0.1+1
 
 
 dev_dependencies:
