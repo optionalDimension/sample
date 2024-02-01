@@ -31,13 +31,18 @@ class _AwardPageState extends State<AwardPage> {
             builder: (context, snapshot) {
               return Stack(
                 children: [
-                  BubbleTimeline(
-                    bubbleSize: 120,
-                    // List of Timeline Bubble Items
-                    items: snapshot.data!.docs.map((e) => _card(e)).toList(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 0.0),
+                    child: BubbleTimeline(
+                      bubbleSize: 120,
+                      // List of Timeline Bubble Items
+                      items: snapshot.data!.docs.reversed
+                          .map((e) => _card(e))
+                          .toList(),
 
-                    stripColor: Colors.teal,
-                    dividerCircleColor: Colors.white,
+                      stripColor: Colors.orange,
+                      dividerCircleColor: Colors.white,
+                    ),
                   )
                 ],
               );

@@ -22,7 +22,6 @@ dependencies:
   firebase_app_check: ^0.2.1+8
   lecle_bubble_timeline: ^0.0.1+1
 
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
