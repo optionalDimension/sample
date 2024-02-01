@@ -27,7 +27,12 @@ class _AwardPageState extends State<AwardPage> {
           title: const Text("Awards"),
         ),
         body: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-            stream: db.collection("awards").snapshots(),
+            stream: db
+                .collection("awards")
+                .orderBy(
+                  "point",
+                )
+                .snapshots(),
             builder: (context, snapshot) {
               return Stack(
                 children: [
@@ -36,9 +41,7 @@ class _AwardPageState extends State<AwardPage> {
                     child: BubbleTimeline(
                       bubbleSize: 120,
                       // List of Timeline Bubble Items
-                      items: snapshot.data!.docs.reversed
-                          .map((e) => _card(e))
-                          .toList(),
+                      items: snapshot.data!.docs.map((e) => _card(e)).toList(),
 
                       stripColor: Colors.orange,
                       dividerCircleColor: Colors.white,
